@@ -10,41 +10,36 @@
  * */
 function NewsCenter(){
     this.subscriber={};
-    this.news={};
-    this.events={};
 }
 NewsCenter.prototype={
-    subscribe:function(p,e,c){
-        if(e in this.events){
-            this.subscriber.e=this.subscriber.e ? [] : this.subscriber.e;
-            this.subscriber.e.push(p);
+    constructor:NewsCenter,
+    subscribe:function(p,e){
+        this.subscriber[e]=typeof this.subscriber[e] =="undefined" ? [] : this.subscriber[e];
+        this.subscriber[e].push(p);
+    },
+    send:function(e,data){
+        var subscribers=this.subscriber[e];
+        var l=subscribers.length;
+        for(var i=0;i<l;i++){
+            if(typeof data != "undefined"){
+                subscribers[i].callbacks[e](data);
+            }else{
+                subscribers[i].callbacks[e]();
+            }
         }
-
-    },
-    addNew:function(id,content){
-        this.news[id]=content;
-        /*find all the subscriber of this event*/
-        var subscribers=this.subscribe.addNew;
-        var length=subscribers.length;
-        for(var i=0;i<length;i++){
-            subscribers.callbacks["addNew"](data);
-        }
-    },
-    changeNew:function(){
-
-    },
-    delNew:function(){
-
     }
 }
 
 var person={
     callbacks:{
-        addNew:function(){
-            console.log("我收到一条新消息!");
+        addNews:function(data){
+            if(data){
+                console.log("我收到一条新消息!消息的内容是:"+data);
+            }
         }
     }
 }
 var center=new NewsCenter();
-center.subscribe(person,"addNew");
+center.subscribe(person,"addNews");
+center.send("addNews","这是新消息的内容!");
 
