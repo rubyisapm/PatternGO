@@ -7,26 +7,6 @@
           <State>
             <id />
           </State>
-<<<<<<< HEAD
-=======
-          <State>
-            <id>XPath</id>
-          </State>
-          <State>
-            <id>XSLT</id>
-          </State>
->>>>>>> 0fc48ca36a652845933f8cc7ae43e47948f07dee
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>CoffeeScript</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
-  </component>
-  <component name="ProjectRootManager" version="2" />
-<<<<<<< HEAD
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -45,8 +25,6 @@
     <configuration useDefault="true">C:\Users\vostro 2420\AppData\Roaming\Subversion</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
-=======
->>>>>>> 0fc48ca36a652845933f8cc7ae43e47948f07dee
   <component name="masterDetails">
     <states>
       <state key="ScopeChooserConfigurable.UI">
